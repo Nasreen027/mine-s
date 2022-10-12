@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        .main{
+            padding: 130px;
+            padding-left:400px ;
+         /* border: 1px solid black; */
+            width: 150px;
+            height: 100px;
+            display: flex;
+        }
+        .main1{
+            padding: 160px;
+            border: 1px solid black;
+            height: 150px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+      <div class="main1">
+        <label>Enter Your Email:</label>
+        <br><br>
+        <input type="text" name="" id="email">
+        <span id="e_s"></span>
+        <br><br>
+        <label>Enter Password:</label>
+        <br><br>
+        <input type="text" name="" id="password">
+        <span id="p_s"></span>
+        <br><br>
+        <button type="submit" onclick="signin()">Sign In</button>
+        <div id="main2"></div>
+      </div>
+    </div>
+
+
+    <script>
+       function signin(){
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("password").value;
+
+        if (!email && !pass){
+            document.getElementById("e_s").style="color:red";
+            document.getElementById("e_s").innerHTML = "Enter Valid Email Address";
+            document.getElementById("p_s").style = "color:red";
+            document.getElementById("p_s").innerHTML = "Enter Valid Password";
+            document.getElementById("main2").innerHTML =  " ";
+    
+           
+        }
+        else if(email!=" " && pass!=" "){ 
+            document.getElementById("e_s").innerHTML = " ";
+            document.getElementById("p_s").innerHTML = " ";
+            // document.getElementById("main2").innerHTML =  "Welcome to My Simple";
+            window.location.href = "./index.html";
+
+        }
+
+       } 
+
+    </script>
+        
+</body>
+</html>
